@@ -22,16 +22,28 @@ sudo python3 setup.py install
 
 ```
 cd etc/
-sed -i "s/TETO/Your token/g" tele.conf
-sudo mkdir /etc/telebot
-sudo mv tele.conf /etc/telebot/
+vi tele.conf
+```
+
+```
+[DEFAULT]
+
+telegram_token = your_token
+```
+Save file
+
+```
+mkdir /etc/telebot
+cp tele.conf /etc/telebot
 ```
 
 4. Install supervisor package
 
 ```
-sudo apt install -y supervisor
-sudo cp bot.conf /etc/supervisor/conf.d/
+sudo yum install -y supervisor
+sudo systemctl start supervisord
+sudo systemctl enable supervisord
+sudo cp bot.conf /etc/supervisord.d/bot.ini
 ```
 
 5. Start BOT
@@ -56,7 +68,7 @@ curl -fsSL https://get.docker.com | sh
 2. Build image from Dockerfile
 
 ```
-cd bot_mdt
+cd bot_telegram/check_port
 build -t bot_image .
 ```
 

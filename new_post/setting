@@ -4,9 +4,9 @@ chat_id = your_chat_id
 
 [mysql]
 hostname = IP_server_mysql
-username = user_mysql
-password = password_mysql
-database = database_name
+username = new_post
+password = your_password
+database = new_post
 
 [sites]
 url = https://news.cloud365.vn/
