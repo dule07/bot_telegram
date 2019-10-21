@@ -7,8 +7,8 @@ A [Telegram](https://telegram.org/) Bot written in Python (Work-In-Progress)
 1. Clone this repo and install all requirements:
 
 ```
-git clone https://github.com/locvx1234/bot_mdt.git
-cd bot_mdt
+git clone https://github.com/nhanhoadocs/bot_telegram.git
+cd bot_telegram/check_port
 sudo pip3 install -r requirements.txt
 ```
 
@@ -18,7 +18,7 @@ sudo pip3 install -r requirements.txt
 sudo python3 setup.py install
 ```
 
-3. Edit tele.conf file and move it to /etc/telegram/
+3. Edit tele.conf and move to /etc/telebot
 
 ```
 cd etc/
@@ -31,14 +31,14 @@ sudo mv tele.conf /etc/telebot/
 
 ```
 sudo apt install -y supervisor
-sudo cp bot_mdt.conf /etc/supervisor/conf.d/
+sudo cp bot.conf /etc/supervisor/conf.d/
 ```
 
 5. Start BOT
 
 ```
 sudo supervisorctl update
-sudo supervisorctl start bot_mdt
+sudo supervisorctl start bot
 ```
 
 ====================================
